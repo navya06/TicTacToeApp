@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static com.example.navyakaree.tictactoeapp.R.color.winnerColor;
+
 public class MainActivity extends AppCompatActivity {
     Button[][] button =new Button[3][3];
     ComputerActivity computerActivity =new ComputerActivity();
@@ -29,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
         button[2][0]=(Button)findViewById(R.id.cell_20);
         button[2][1]=(Button)findViewById(R.id.cell_21);
         button[2][2]=(Button)findViewById(R.id.cell_22);
-        whoseTurn =(TextView)findViewById(R.id.who_playTextView);
-        winner =(TextView)findViewById(R.id.winner_resultTextView);
+        whoseTurn =(TextView)findViewById(R.id.whoseTurnTextView);
+        winner =(TextView)findViewById(R.id.winnerResultTextView);
         replayButton =(Button)findViewById(R.id.replayButton);
         boolean type=getIntent().getBooleanExtra("TYP",true);
         if(type)
@@ -53,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
         button[0][0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"w",Toast.LENGTH_LONG).show();
                 computerActivity.play(0,0,ComputerActivity.cha_inf);
                 updatedGrid();
 
@@ -175,13 +176,17 @@ public class MainActivity extends AppCompatActivity {
                 }
         }
         if(computerActivity.gameOver()&& computerActivity.score()==0) {
+            winner.setTextColor(getResources().getColor(winnerColor));
             winner.setText("Nobody wins!");
         }
         else if(computerActivity.gameOver()) {
-            if (computerActivity.score() == 1)
+            if (computerActivity.score() == 1) {
+                winner.setTextColor(getResources().getColor(winnerColor));
                 winner.setText("Computer wins");
-            else
+            } else {
+                winner.setTextColor(getResources().getColor(winnerColor));
                 winner.setText("You wins");
+            }
         }
     }
 }

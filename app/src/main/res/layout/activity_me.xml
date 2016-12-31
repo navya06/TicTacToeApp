@@ -3,21 +3,24 @@
     android:orientation="vertical"
     android:gravity="center"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_margin="2dp"
-        android:text="TT"
-        android:textColor="#ff0000"
-        android:id="@+id/who_playTextView"/>
+        android:text="Me First"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/whoseTurnTextView"
+        android:textSize="24sp" />
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:columnCount="3"
+
         android:id="@+id/grid_track"
         android:rowCount="3">
 
@@ -27,21 +30,33 @@
             android:layout_height="100dp"
             android:layout_row="0"
             android:layout_column="0"
-            android:text="X"/>
+            android:text="X"
+            android:background="@android:color/background_light"
+            android:textSize="20sp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@android:color/black" />
 
         <Button android:id="@+id/cell_01"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_row="0"
             android:layout_column="1"
-            android:text="X"/>
+            android:text="X"
+            android:background="@android:color/background_light"
+            android:textSize="20sp"
+            android:layout_marginRight="5dp"
+            android:textColor="@android:color/black"/>
 
         <Button android:id="@+id/cell_02"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_row="0"
             android:layout_column="2"
-            android:text="X"/>
+            android:text="X"
+            android:background="@android:color/background_light"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"/>
 
 
 
@@ -52,21 +67,30 @@
             android:layout_height="100dp"
             android:layout_row="1"
             android:layout_column="0"
-            android:text="X"/>
+            android:text="X"
+            android:background="@android:color/background_light"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"/>
 
         <Button android:id="@+id/cell_11"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_row="1"
             android:layout_column="1"
-            android:text="X"/>
+            android:text="X"
+            android:background="@android:color/background_light"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"/>
 
         <Button android:id="@+id/cell_12"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_row="1"
             android:layout_column="2"
-            android:text="X"/>
+            android:text="X"
+            android:background="@android:color/background_light"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"/>
 
 
         <!-- ROW 2-->
@@ -75,21 +99,33 @@
             android:layout_height="100dp"
             android:layout_row="2"
             android:layout_column="0"
-            android:text="X"/>
+            android:text="X"
+            android:background="@android:color/background_light"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"/>
 
         <Button android:id="@+id/cell_21"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_row="2"
             android:layout_column="1"
-            android:text="X"/>
+            android:text="X"
+            android:background="@android:color/background_light"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"/>
 
         <Button android:id="@+id/cell_22"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_row="2"
             android:layout_column="2"
-            android:text="X"/>
+            android:text="X"
+            android:background="@android:color/background_light"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"/>
 
 
     </GridLayout>
@@ -99,14 +135,17 @@
         android:layout_height="wrap_content"
         android:text="The Winner is:"
         android:gravity="center"
-        android:textColor="#ff0000"
-        android:layout_margin="2dp"
-        android:id="@+id/winner_resultTextView"/>
+        android:textColor="@color/colorPrimary"
+        android:layout_margin="20dp"
+        android:id="@+id/winnerResultTextView"
+        android:textSize="24sp" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:id="@+id/replayButton"
-        android:layout_margin="2dp"
-        android:text="RESTART"/>
+        android:layout_margin="15dp"
+        android:text="RESTART"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/background_light" />
 </LinearLayout>
